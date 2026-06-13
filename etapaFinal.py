@@ -1,6 +1,12 @@
 import tkinter as tk
 
-alumnos={}
+user = input("Ingrese nombre de usuario:")
+password = input("Ingrese la contraseña:")
+
+if user != "admin" or password != "uni123":
+    print("Usuario y/o contraseña incorrecta")
+else:
+    alumnos = {}
 
 def agregar_alumno():
     nombre = entrada_nombre.get()
@@ -23,7 +29,7 @@ def ver_cantidad_cursos():
 
 ventana = tk.Tk()
 ventana.title("Proyecto integrador")
-ventana.config(width=400, height=300)
+ventana.config(width=600, height=600)
 
 tk.Button(ventana, text="Ver lista de alumnos", command=ver_lista).pack(pady=10, padx=10, anchor="w")
 
